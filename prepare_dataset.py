@@ -25,4 +25,6 @@ for image in images:
     resized_images.append(image)
 
 for name, image in zip(files, resized_images):
-    print(name, image.shape)
+    name = name.split('.')[0]
+    name = f'{name}.jpg'
+    cv2.imwrite(f'{results_folder}/{name}', image)
