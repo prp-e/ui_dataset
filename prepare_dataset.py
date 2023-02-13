@@ -23,3 +23,6 @@ print(len(images))
 for image in images:
     image = cv2.resize(image, final_size)
     resized_images.append(image)
+
+for name, image in zip(files, resized_images):
+    print(name, image.shape)
