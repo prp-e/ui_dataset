@@ -10,6 +10,7 @@ os.mkdir(results_folder)
 
 files = os.listdir(folder)
 images = []
+resized_images = []
 
 #reading all images
 for file in files:
@@ -17,3 +18,8 @@ for file in files:
     images.append(cv2.imread(address))
 
 print(len(images))
+
+#resizing all images
+for image in images:
+    image = cv2.resize(image, final_size)
+    resized_images.append(image)
