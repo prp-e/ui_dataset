@@ -7,3 +7,6 @@ results_folder = 'results'
 
 # creating the results folder
 os.mkdir(results_folder)
+
+files = os.listdir(folder)
+images = []
