@@ -10,3 +10,9 @@ os.mkdir(results_folder)
 
 files = os.listdir(folder)
 images = []
+
+for file in files:
+    address = f'{folder}/{file}'
+    images.append(cv2.imread(address))
+
+print(len(images))
