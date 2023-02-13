@@ -24,6 +24,7 @@ for image in images:
     image = cv2.resize(image, final_size)
     resized_images.append(image)
 
+#saving all the material
 for name, image in zip(files, resized_images):
     name = name.split('.')[0]
     name = f'{name}.jpg'
